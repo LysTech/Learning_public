@@ -1,0 +1,2 @@
+Here you can find what to do in real life [[Data Collection IRL Procedure]] and you can ignore the connected files (maybe see in graph view) 
+Then for coding tasks and explanation of the problem of 4/20/2026 [[Data collection Code Procedures POV]] 

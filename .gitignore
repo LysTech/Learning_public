@@ -1,0 +1,37 @@
+=== Obsidian: personal UI state ===,
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/workspace.json.bak
+
+=== Obsidian: caches ===,
+.obsidian/cache
+.obsidian/cache.json
+
+=== Obsidian: trash ===,
+.trash/
+
+=== macOS junk ===,
+.DSStore
+.AppleDouble
+.LSOverride
+Icon?
+
+=== Windows junk ===,
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+
+=== Linux junk ===,
+.directory
+.Trash-*
+
+=== Editor leftovers ===,
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+=== Misc ===,
+*.log

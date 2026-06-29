@@ -1,0 +1,47 @@
+filters:
+  and:
+    - note.type == "book"
+properties:
+  note.title:
+    displayName: Title
+  note.authors:
+    displayName: Authors
+  note.year:
+    displayName: Year
+  note.venue:
+    displayName: Source
+  note.channel:
+    displayName: Channel
+  note.shared_by:
+    displayName: Shared by
+  note.status:
+    displayName: Status
+  note.rating:
+    displayName: Rating
+views:
+  - type: table
+    name: All Books
+    order:
+      - file.name
+      - note.authors
+      - note.year
+      - note.venue
+      - note.channel
+      - note.status
+      - note.rating
+    sort:
+      - property: note.added
+        direction: DESC
+  - type: table
+    name: To Read
+    filters:
+      and:
+        - note.status == "to-read"
+    order:
+      - file.name
+      - note.authors
+      - note.channel
+      - note.shared_by
+    sort:
+      - property: note.added
+        direction: DESC

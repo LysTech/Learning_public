@@ -1,0 +1,44 @@
+filters:
+  and:
+    - note.type == "video"
+properties:
+  note.title:
+    displayName: Title
+  note.authors:
+    displayName: Authors / Creator
+  note.year:
+    displayName: Year
+  note.venue:
+    displayName: Source
+  note.channel:
+    displayName: Channel
+  note.shared_by:
+    displayName: Shared by
+  note.status:
+    displayName: Status
+views:
+  - type: table
+    name: All Videos
+    order:
+      - file.name
+      - note.authors
+      - note.year
+      - note.venue
+      - note.channel
+      - note.status
+    sort:
+      - property: note.added
+        direction: DESC
+  - type: table
+    name: To Watch
+    filters:
+      and:
+        - note.status == "to-read"
+    order:
+      - file.name
+      - note.authors
+      - note.channel
+      - note.shared_by
+    sort:
+      - property: note.added
+        direction: DESC

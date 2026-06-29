@@ -1,0 +1,63 @@
+filters:
+  and:
+    - note.type == "paper"
+properties:
+  note.title:
+    displayName: Title
+  note.authors:
+    displayName: Authors
+  note.year:
+    displayName: Year
+  note.venue:
+    displayName: Venue
+  note.channel:
+    displayName: Channel
+  note.shared_by:
+    displayName: Shared by
+  note.status:
+    displayName: Status
+  note.rating:
+    displayName: Rating
+  note.tags:
+    displayName: Tags
+views:
+  - type: table
+    name: All Papers
+    order:
+      - file.name
+      - note.authors
+      - note.year
+      - note.venue
+      - note.channel
+      - note.status
+      - note.rating
+    sort:
+      - property: note.year
+        direction: DESC
+  - type: table
+    name: To Read
+    filters:
+      and:
+        - note.status == "to-read"
+    order:
+      - file.name
+      - note.authors
+      - note.year
+      - note.channel
+      - note.shared_by
+    sort:
+      - property: note.added
+        direction: DESC
+  - type: table
+    name: By Channel
+    order:
+      - file.name
+      - note.channel
+      - note.year
+      - note.authors
+      - note.status
+    sort:
+      - property: note.channel
+        direction: ASC
+      - property: note.year
+        direction: DESC
